@@ -4,6 +4,7 @@ import { categoryById } from '@/lib/data'
 import { timeAgo } from '@/lib/format'
 import { useAppState } from '@/lib/store'
 import { Icon } from '@/components/Icon'
+import { DataExchange } from '@/components/DataExchange'
 import { ReportView } from '@/components/ReportView'
 import {
   Card,
@@ -96,6 +97,7 @@ export function PatientReports() {
                 </Card>
               )}
               <ReportView report={selected.report} />
+              <DataExchange caseData={selected} />
             </>
           ) : (
             <EmptyState icon="FileText" title="Select a report" />

@@ -5,6 +5,7 @@ import { timeAgo } from '@/lib/format'
 import { addDoctorNote, useAppState } from '@/lib/store'
 import { useAuth } from '@/context/AuthContext'
 import { Icon } from '@/components/Icon'
+import { DataExchange } from '@/components/DataExchange'
 import { ReportView } from '@/components/ReportView'
 import {
   Avatar,
@@ -119,6 +120,7 @@ export function ReviewQueue() {
               </Card>
 
               <ReportView report={selected.report} />
+              <DataExchange caseData={selected} />
 
               {selected.doctorNote ? (
                 <Card className="border-emerald-200 bg-emerald-50/60">

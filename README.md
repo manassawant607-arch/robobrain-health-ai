@@ -37,6 +37,7 @@ Patients upload **symptoms, prescriptions and lab reports** and instantly receiv
 - **Seven disease categories** mapped across every finding.
 - **Fully responsive** — works from mobile to widescreen.
 - **Works offline** — Local Reasoner mode runs entirely in the browser with `localStorage` persistence; no API key required.
+- **Clean Data Exchange** — every decision-support report exports as a validated **HL7 FHIR R4** bundle (Patient, LOINC-coded vitals Observations, Conditions, MedicationStatements, RiskAssessment, referral ServiceRequest, DiagnosticReport, and AI/clinician Provenance), interoperable with EHRs, HIE gateways and Japan's JP Core profile. Structural validation runs before every export so receiving systems never get a broken payload.
 
 ---
 

@@ -5,6 +5,7 @@ import { buildCaseFromSubmission, generateReportStream, PIPELINE_STAGES } from '
 import { addCase, useAppState } from '@/lib/store'
 import { Icon } from '@/components/Icon'
 import { ReasoningTrace } from '@/components/ReasoningTrace'
+import { DataExchange } from '@/components/DataExchange'
 import { ReportView } from '@/components/ReportView'
 import { Card, SectionTitle } from '@/components/ui'
 
@@ -199,6 +200,7 @@ export function NewSubmission() {
           </div>
         </div>
         <ReportView report={result.report} />
+        <DataExchange caseData={result} />
       </div>
     )
   }
